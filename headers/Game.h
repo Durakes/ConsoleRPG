@@ -3,10 +3,8 @@
 
 #include <iostream>
 #include <iomanip>
-#include <string>
 #include <ctime>
-
-using namespace std;
+#include "Character.h"
 
 class Game
 {
@@ -23,6 +21,8 @@ class Game
         void mainMenu();
 
         //Accesors
+        //! inline, palabra reservada para funciones cortas, evita el llamar a la función y la reemplaza donde se esté "llamando"
+        //! const para que no se pueda modificar sin querer el valor de lo que esté devolviendo la función.
         inline bool getPlaying() const {return this->playing;}
 
         //Modifiers
