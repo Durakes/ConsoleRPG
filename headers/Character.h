@@ -1,7 +1,8 @@
 #ifndef __CHARACTER_H__
 #define __CHARACTET_H__
 
-#include <string>
+#include "..\src\Inventory.cpp"
+
 using namespace std;
 class Character
 {
@@ -13,12 +14,23 @@ class Character
         int level;
         int exp;
         int expNext;
+        
+        int strength;
+        int vitality;
+        int dexterity;
+        int intelligence;
+        
         int hp;
         int hpMax;
         int stamina;
+        int staminaMax;
         int damageMin;
         int damageMax;
         int defense;
+        int luck;
+
+        int statPoints;
+        int skillPoints;
 
     public:
         //Constructor
@@ -28,7 +40,8 @@ class Character
         // Functions
 
         void initialize(const string name);
-        string getAsString() const;
+        void printStats() const;
+        void levelUp();
 
         //Accessors
         inline const double& getX() const {return this->xPos;}

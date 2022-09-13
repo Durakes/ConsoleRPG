@@ -1,16 +1,15 @@
 #ifndef __GAME_H__
 #define __GAME_H__
 
-#include <iostream>
-#include <iomanip>
 #include <ctime>
-#include "Character.h"
+#include "..\src\Character.cpp"
 
 class Game
 {
     private:
         int choice;
         bool playing;
+        Character character;
     public:
         Game();
         virtual ~Game();
@@ -19,6 +18,7 @@ class Game
 
         //Functions
         void mainMenu();
+        void initGame();
 
         //Accesors
         //! inline, palabra reservada para funciones cortas, evita el llamar a la función y la reemplaza donde se esté "llamando"
